@@ -2,7 +2,7 @@ package HTTP::Session::Store::KyotoTycoon;
 use strict;
 use warnings;
 use 5.00800;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 use Cache::KyotoTycoon;
 use Storable ();
 
@@ -59,7 +59,7 @@ HTTP::Session::Store::KyotoTycoon - HTTP::Session with Cache::KyotoTycoon
     use HTTP::Session::Store::KyotoTycoon;
 
     HTTP::Session->new(
-        store => HTTP::Session::Store::Memcached->new(
+        store => HTTP::Session::Store::KyotoTycoon->new(
             host => 'localhost',
             port => 1978,
             db   => 0,
